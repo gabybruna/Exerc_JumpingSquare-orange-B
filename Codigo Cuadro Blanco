@@ -1,0 +1,32 @@
+// inicializando la variables de Y
+float pifo = 0;
+float rey = 3.1;
+int gif = 1;
+// inicializando la variables de Z
+float fin = 0;
+float antes = 5.1;
+int zeta =1;
+
+void setup(){
+ size(300,300); 
+}
+void draw(){
+  background(200,80,30);
+  // actualizar las variables
+  // con multiplicaión
+  pifo =pifo + (rey * gif);
+  fin = fin + (antes * zeta);
+  // imprimir el valor
+  println("pifo: " + pifo);
+  println("fin: " + fin);
+  // x, y
+  
+  if(pifo > height || pifo < 0){
+    gif = gif * -1;
+  }
+  
+  if(fin > width || fin <0){
+    zeta = zeta * -1;
+  }
+  rect(fin,pifo,40,40);
+}
